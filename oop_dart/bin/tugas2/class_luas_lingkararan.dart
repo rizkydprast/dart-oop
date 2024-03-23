@@ -1,19 +1,20 @@
 abstract class Bentuk {
-  double hitungLuas();
+  double hitungLuas(); // Method abstrak
 }
 
 class Lingkaran extends Bentuk {
-  double radius;
+  double jariJari;
 
-  Lingkaran(this.radius);
+  Lingkaran(this.jariJari);
 
   @override
   double hitungLuas() {
-    return 3.14 * radius * radius;
+    return 3.14 * jariJari * jariJari;
   }
 }
 
 void main() {
-  Lingkaran lingkaran = Lingkaran(7);
-  print('Luas Lingkaran: ${lingkaran.hitungLuas()}');
+  // Membuat objek Lingkaran
+  var lingkaran = Lingkaran(5);
+  print("Luas Lingkaran: ${lingkaran.hitungLuas()}");
 }
