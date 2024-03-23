@@ -1,6 +1,6 @@
 class BangunDatar {
   double hitungLuas() {
-    return 0;
+    return 0; // Default implementation (can be overridden)
   }
 }
 
@@ -28,9 +28,11 @@ class Segitiga extends BangunDatar {
 }
 
 void main() {
-  Persegi persegi = Persegi(5);
-  print('Luas Persegi: ${persegi.hitungLuas()}');
+  // Membuat objek Persegi
+  var persegi = Persegi(5);
+  print("Luas Persegi: ${persegi.hitungLuas()}");
 
-  Segitiga segitiga = Segitiga(4, 6);
-  print('Luas Segitiga: ${segitiga.hitungLuas()}');
+  // Membuat objek Segitiga
+  var segitiga = Segitiga(4, 3);
+  print("Luas Segitiga: ${segitiga.hitungLuas()}");
 }
