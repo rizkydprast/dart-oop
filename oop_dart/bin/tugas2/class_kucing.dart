@@ -2,22 +2,27 @@ class Hewan {
   String nama;
 
   Hewan(this.nama);
-  void suara() {}
+
+  void suara() {
+    print("Hewan bersuara");
+  }
 }
 
 class Kucing extends Hewan {
   String jenisBulu;
+
   Kucing(String nama, this.jenisBulu) : super(nama);
 
   @override
   void suara() {
-    print('Meong');
+    print("Meow");
   }
 }
 
-void main(List<String> args) {
-  Kucing kucingku = Kucing('himalaya', "Persia");
-  print(kucingku.nama);
-  print(kucingku.jenisBulu);
-  kucingku.suara();
+void main() {
+  // Membuat objek dari class Kucing
+  var kucingSaya = Kucing("Kucing hitam", "tanpa bulu");
+
+  // Memanggil metode suara()
+  kucingSaya.suara();
 }
