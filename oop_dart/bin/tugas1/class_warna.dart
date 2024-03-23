@@ -1,17 +1,22 @@
 class Warna {
   final int red;
-  final int blue;
   final int green;
+  final int blue;
 
-  const Warna(this.red, this.blue, this.green);
+  const Warna(this.red, this.green, this.blue);
+
+  void info() {
+    print('Warna: R:$red G:$green B:$blue');
+  }
 }
 
-void main(List<String> args) {
-  const warnaMerah = Warna(255, 0, 0);
-  const warnaBiru = Warna(0, 255, 0);
-  const warnaHijau = Warna(0, 0, 255);
+void main() {
+  const Warna warna1 = Warna(255, 0, 0);
+  warna1.info();
 
-  print("Warna Merah: RGB(${warnaMerah.red}, ${warnaMerah.green}, ${warnaMerah.blue})");
-  print("Warna Hijau: RGB(${warnaHijau.red}, ${warnaHijau.green}, ${warnaHijau.blue})");
-  print("Warna Biru: RGB(${warnaBiru.red}, ${warnaBiru.green}, ${warnaBiru.blue})");
+  const Warna warna2 = Warna(0, 255, 0);
+  warna2.info();
+
+  const Warna warna3 = Warna(0, 0, 255);
+  warna3.info();
 }
