@@ -1,15 +1,19 @@
 class Buku {
-  String? judul;
-  String? pengarang;
+  String judul;
+  String pengarang;
 
-  Buku(String judul, String pengarang) {
-    this.judul = judul;
-    this.pengarang = pengarang;
+  Buku(this.judul, this.pengarang); // Parameterized constructor
+
+  void cetakInformasiBuku() {
+    print("Judul Buku: ${this.judul}");
+    print("Pengarang: ${this.pengarang}");
   }
 }
 
-void main(List<String> args) {
-  Buku buku = Buku("laskar pelangi", 'andrea hirata');
-  print("judul : ${buku.judul}" );
-  print("Pengarang : ${buku.pengarang}");
+void main() {
+  // Membuat objek dari class Buku
+  var bukuSaya = Buku("Habis Gelap Terbitlah Terang", "Raden Ajeng Kartini");
+
+  // Mencetak informasi buku
+  bukuSaya.cetakInformasiBuku();
 }
